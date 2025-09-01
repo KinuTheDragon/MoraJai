@@ -87,7 +87,9 @@
         </select>
         <button onclick="loadPuzzle(document.getElementById('preset').value)">Load preset</button><br/>
         <button onclick="generateRandomPuzzle()">Generate random puzzle</button>
-        Random puzzle solution (not guaranteed optimal, hover to reveal): <span id="randomSolution">N/a</span><br/><br/>
+        Random puzzle solution (not guaranteed optimal, hover to reveal): <span id="randomSolution">N/a</span><br/>
+        <label for="mute">Mute sounds?</label>
+        <input type="checkbox" name="mute" id="mute" /><br/><br/>
         <div id="puzzle-border"></div><table id="puzzle"></table>
         <h2>Reminders</h2>
         <table id="hints">

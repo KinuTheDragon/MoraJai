@@ -224,3 +224,7 @@ a, button {
     height: 80px;
     image-rendering: pixelated;
 }
+
+body.no-transition * {
+    transition: none !important;
+}
