@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+    background-color: #121214;
+    font-family: "Noto Serif";
+    color: #fff;
+}
+
+a {
+    color: #0ff;
+}
+
+a:hover, a:active {
+    color: #0f0;
+}
+
+.spoiler-warning {
+    animation-name: spoiler-warning;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes spoiler-warning {
+    0% {color: #f00;}
+    100% {color: #f88;}
+}
+
+.how2p tr, .how2p th, .how2p td {
+    border: 3px solid #888;
+}
+
+.how2p th, .how2p td {
+    padding: 5px;
+}
+
+.how2p {
+    border-collapse: collapse;
+}
+
+.how2p td:not(:last-child) {
+    text-align: center;
+}
+
+.how2p td:first-child {
+    font-weight: bold;
+}
+
+#puzzle-border {
+    width: 440px;
+    height: 440px;
+    position: absolute;
+    background-color: #181818;
+    border: 10px solid #2b2213;
+    z-index: -1;
+    transform: translate(50px, 50px);
+    transition: border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#puzzle-border.complete {
+    border-color: #ffcc00;
+}
+
+.corner-ul [data-symbol=white] svg,
+.corner-ul [data-symbol=yellow] svg,
+.corner-ul [data-symbol=blue] svg {
+    transform: translate(-5%, -5%) rotate(-45deg);
+}
+
+.corner-ul [data-symbol=pink] svg {
+    transform: none;
+}
+
+.corner-ul svg {
+    transform: rotate(-45deg);
+}
+
+.corner-ur [data-symbol=white] svg,
+.corner-ur [data-symbol=yellow] svg,
+.corner-ur [data-symbol=blue] svg {
+    transform: translate(5%, -5%) rotate(45deg);
+}
+
+.corner-ur [data-symbol=pink] svg {
+    transform: rotate(90deg);
+}
+
+.corner-ur svg {
+    transform: rotate(45deg);
+}
+
+.corner-dl [data-symbol=white] svg,
+.corner-dl [data-symbol=yellow] svg,
+.corner-dl [data-symbol=blue] svg {
+    transform: translate(-5%, 5%) rotate(-135deg);
+}
+
+.corner-dl svg {
+    transform: rotate(-135deg);
+}
+
+.corner-dl [data-symbol=pink] svg {
+    transform: rotate(-90deg);
+}
+
+.corner-dr [data-symbol=white] svg,
+.corner-dr [data-symbol=yellow] svg,
+.corner-dr [data-symbol=blue] svg {
+    transform: translate(5%, 5%) rotate(135deg);
+}
+
+.corner-dr svg {
+    transform: rotate(135deg);
+}
+
+.corner-dr [data-symbol=pink] svg {
+    transform: rotate(180deg);
+}
+
+.corner {
+    border-radius: 60px;
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    background-color: #181818;
+    border: 10px solid #2b2213;
+    transition: border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#puzzle.complete .corner {
+    border-color: #ffcc00;
+}
+
+.corner svg path {
+    fill: #555962;
+}
+
+.corner [data-symbol=gray] svg path {
+    fill: #333;
+}
+
+.corner div {
+    width: 75%;
+    height: 75%;
+    margin: auto;
+}
+
+.tile {
+    border: 5px solid transparent;
+    background-color: #2b2213 !important;
+    width: 100px;
+    height: 100px;
+    transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tile:hover {
+    background-color: #5e4a2a !important;
+}
+
+.tile::before {
+    content: "";
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-color: var(--color);
+    position: relative;
+}
+
+.corner-tile-ul, .corner-tile-ul::before {
+    clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 20%);
+}
+
+.corner-tile-ur, .corner-tile-ur::before {
+    clip-path: polygon(80% 0%, 100% 20%, 100% 100%, 0% 100%, 0% 0%);
+}
+
+.corner-tile-dl, .corner-tile-dl::before {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 20% 100%, 0% 80%);
+}
+
+.corner-tile-dr, .corner-tile-dr::before {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 80% 100%, 0% 100%);
+}
+
+#grid {
+    border-spacing: 10px;
+    margin: -35px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-family: "Noto Serif";
+    font-size: initial;
+    padding: 0;
+    color: #08f;
+    text-decoration: underline;
+}
+
+button:hover {
+    color: #0f8;
+}
+
+button:disabled {
+    color: #aaa;
+}
+
+a, button {
+    transition: color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.spoiler {
+    background-color: #fff;
+    transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.spoiler:hover {
+    background-color: transparent;
+}

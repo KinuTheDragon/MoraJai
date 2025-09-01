@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mora Jai Box Player: Play</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Mora Jai Box Player: Play</h1>
+        <a href="index.html">Back to home</a><br/>
+        <button onclick="resetPuzzle()" id="resetButton">Reset puzzle</button><br/>
+        <button onclick="toggleEdit()" id="editToggle">Switch to edit mode</button>
+        <label for="editColor">Edit color:</label>
+        <select name="editColor" id="editColor" disabled></select><br/>
+        <label for="preset">Select preset:</label>
+        <select name="preset" id="preset">
+            <option value="-------------">Blank</option>
+            <option value="yyyyp---yy-yy">Trading Post</option>
+            <option value="ooookopooopoo">Tunnel</option>
+            <option value="bbbbkgbbbbv--">Blue Prince Throne Room</option>
+            <option value="pppppppp-p---">Lost and Found</option>
+            <option value="rrrrokoorooko">Closed Exhibit</option>
+            <option value="vvvv-v--p-vvv">Clara Tomb</option>
+            <option value="ggggg-ygygy-g">Solarium</option>
+            <option value="wwwww-ww----w">Master Bedroom</option>
+            <option value="kkkkgkgkkkgyg">Inner Sanctum: Orindia</option>
+            <option value="rrrr-g-orowgk">Inner Sanctum: Fenn Aries</option>
+            <option value="yyyyky-ygy-yk">Inner Sanctum: Arch Aries</option>
+            <option value="vvvvyvygrkvvv">Inner Sanctum: Eraja</option>
+            <option value="oooookoooovgv">Inner Sanctum: Corarica</option>
+            <option value="wwwwyyywpw---">Inner Sanctum: Mora Jai</option>
+            <option value="pppppp----ooo">Inner Sanctum: Verra</option>
+            <option value="ggggg-g-oo-kv">Inner Sanctum: Nuance</option>
+            <option value="kkkkkkkgk---p">The Unknown: Box #1</option>
+            <option value="kkkko-vo-vkkk">The Unknown: Box #2</option>
+            <option value="kkkkkkk---pvo">The Unknown: Box #3</option>
+            <option value="kkkkkkko-oy-y">The Unknown: Box #4</option>
+            <option value="kkkko-pk-kg-o">The Unknown: Box #5</option>
+            <option value="kkkkkvk---ogo">The Unknown: Box #6</option>
+            <option value="kkkkoookgkvgv">The Unknown: Box #7</option>
+            <option value="kkkkkgykkk---">The Unknown: Box #8</option>
+            <option value="ggggk-oogoogy">Blueprints: Conservatory (A1)</option>
+            <option value="vvvvpppooovvv">Blueprints: Maid's Chamber (A2)</option>
+            <option value="yyyyyyykyg-b-">Blueprints: Entrance Hall (A3)</option>
+            <option value="bbbbbvbkbvbvv">Blueprints: Pantry (A4)</option>
+            <option value="rrrrkkk-o-prp">Blueprints: Storeroom (A5)</option>
+            <option value="ggggoyog-gbgb">Blueprints: Bedroom (B1)</option>
+            <option value="vvvvvvvk--obo">Blueprints: Drawing Room (B2)</option>
+            <option value="bbbb-k-ybybbb">Blueprints: Gallery (B3)</option>
+            <option value="bbbbpoobbpoop">Blueprints: Library (B4)</option>
+            <option value="orropkpo-oprp">Blueprints: Cloister (B5)</option>
+            <option value="ggggkgkovobgb">Blueprints: Solarium (C1)</option>
+            <option value="bbbbwwwywkbbb">Blueprints: Hallway (C2)</option>
+            <option value="oooopopobopop">Blueprints: Dining Room (C3)</option>
+            <option value="bbbbgb-kb-vbb">Blueprints: Observatory (C4)</option>
+            <option value="bbbbvwvwwwbpb">Blueprints: East Wing Hall (C5)</option>
+            <option value="vvvvrgokkkvbv">Blueprints: Nook (D1)</option>
+            <option value="ooooogoyoobyo">Blueprints: Kitchen (D2)</option>
+            <option value="bbbbgygbobbob">Blueprints: Corridor (D3)</option>
+            <option value="bbbbpbbbbvg-p">Blueprints: Music Room (D4)</option>
+            <option value="gyygoyogygkyk">Blueprints: Lavatory (D5)</option>
+            <option value="rrrrpwpb-bprp">Blueprints: Billiards Room (E1)</option>
+            <option value="wwwwwr--p-krw">Blueprints: Trophy Room (E2)</option>
+            <option value="oooo-ooyokbbo">Blueprints: Foundation (E3)</option>
+            <option value="bbbbgwwkwkbwb">Blueprints: Ballroom (E4)</option>
+            <option value="bbbbkb-bobkoy">Blueprints: Spare Room (E5)</option>
+            <option value="vvvvkgk-o-vvv">Blueprints: West Wing Hall (F1)</option>
+            <option value="vvvvpwporovwv">Blueprints: Passageway (F2)</option>
+            <option value="ooooyoyooopop">Blueprints: Dark Room (F3)</option>
+            <option value="oooopopooogog">Blueprints: Closet (F4)</option>
+            <option value="ggggkbkkgobgb">Blueprints: Parlor Room (F5)</option>
+            <option value="rrrrpwpkrk---">Blueprints: Gymnasium (G1)</option>
+            <option value="vvvvpovo--pbv">Blueprints: Laundry Room (G2)</option>
+            <option value="kyykyyykkk-g-">Blueprints: Guest Bedroom (G3)</option>
+            <option value="yyyyyyyk-kogo">Blueprints: Conference Room (G4)</option>
+            <option value="vvvv-p-ogov-v">Blueprints: Den (G5)</option>
+            <option value="ggggggg-oob-v">Blueprints: Foyer (H1)</option>
+            <option value="rrrrrwybgbbyb">Blueprints: Pool (H2)</option>
+            <option value="kkkk---krkw-y">Blueprints: Servant's Quarters (H3)</option>
+            <option value="vvvvvbvkgokgo">Blueprints: Pump Room (H4)</option>
+            <option value="bbbbk--wgwbyo">Blueprints: Furnace (H5)</option>
+            <option value="orror-kooog-v">Blueprints: Archives (I1)</option>
+            <option value="oooobobkkobob">Blueprints: Chapel (I2)</option>
+            <option value="kvor-g-okrkwv">Blueprints: Vestibule (I3)</option>
+            <option value="bkbkygykkkbgb">Blueprints: Coat Check (I4)</option>
+            <option value="yyyyp-yrywobk">Blueprints: Aquarium (I5)</option>
+            <option value="bbbbopo-g-b-b">Blueprints: 46th room (H5)</option>
+        </select>
+        <button onclick="loadPuzzle(document.getElementById('preset').value)">Load preset</button><br/>
+        <button onclick="generateRandomPuzzle()">Generate random puzzle</button>
+        Random puzzle solution (not guaranteed optimal, hover to reveal): <span id="randomSolution">N/a</span><br/><br/>
+        <div id="puzzle-border"></div><table id="puzzle"></table>
+        <script src="colors.js"></script>
+        <script src="symbols.js"></script>
+        <script src="reformat.js"></script>
+        <script src="puzzle.js"></script>
+    </body>
+</html>

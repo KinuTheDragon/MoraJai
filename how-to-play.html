@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mora Jai Box Player: How to Play</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>Mora Jai Box Player: How to Play</h1>
+        <a href="index.html">Back to home</a><br/>
+        In a Mora Jai puzzle, your goal is to change the corner tiles to the correct colors.<br/>
+        You do this by clicking on the various tiles to trigger their effects.<br/>
+        Once the corner tiles match the given symbols, click on the symbols to submit your solution.<br/>
+        Clicking on the symbols when the corresponding corner does not match will reset the Mora Jai puzzle.<br/>
+        If the corner's color changes when the symbol is lit up, it will reset the corresponding symbol.
+        <table class="how2p">
+            <tr>
+                <th>Color</th>
+                <th>Symbol</th>
+                <th>Country</th>
+                <th>Effect when clicked</th>
+            </tr><tr>
+                <td data-color="gray">Gray</td>
+                <td data-symbol="gray" data-symfill="true"></td>
+                <td>N/a</td>
+                <td>None</td>
+            </tr><tr>
+                <td data-color="white">White</td>
+                <td data-symbol="white" data-symfill="true"></td>
+                <td>Mora Jai</td>
+                <td>For this tile and each adjacent tile, swap gray and this color.</td>
+            </tr><tr>
+                <td data-color="yellow">Yellow</td>
+                <td data-symbol="yellow" data-symfill="true"></td>
+                <td>Arch Aries</td>
+                <td>Swap this tile with the tile to its north. If there is none, do nothing.</td>
+            </tr><tr>
+                <td data-color="orange">Orange</td>
+                <td data-symbol="orange" data-symfill="true"></td>
+                <td>Corarica</td>
+                <td>Change this tile to the majority of its adjacent tiles' colors. If there is no majority, do nothing.</td>
+            </tr><tr>
+                <td data-color="violet">Violet</td>
+                <td data-symbol="violet" data-symfill="true"></td>
+                <td>Eraja</td>
+                <td>Swap this tile with the tile to its south. If there is none, do nothing.</td>
+            </tr><tr>
+                <td data-color="red">Red</td>
+                <td data-symbol="red" data-symfill="true"></td>
+                <td>Fenn Aries</td>
+                <td>Turn all black tiles into red, and all white tiles into black.</td>
+            </tr><tr>
+                <td data-color="green">Green</td>
+                <td data-symbol="green" data-symfill="true"></td>
+                <td>Nuance</td>
+                <td>Swap this tile with the tile reflected through the board's center (e.g. top-left with bottom-right).</td>
+            </tr><tr>
+                <td data-color="black">Black</td>
+                <td data-symbol="black" data-symfill="true"></td>
+                <td>Orinda Aries</td>
+                <td>Cycle all tiles in this row to the east, wrapping around the board.</td>
+            </tr><tr>
+                <td data-color="pink">Pink</td>
+                <td data-symbol="pink" data-symfill="true"></td>
+                <td>Verra</td>
+                <td>Rotate all adjacent and diagonal tiles clockwise around this tile.</td>
+            </tr><tr>
+                <td data-color="blue">Blue</td>
+                <td data-symbol="blue" data-symfill="true"></td>
+                <td>Mount Holly</td>
+                <td>Act the same as the center tile of the board.</td>
+            </tr>
+        </table>
+        <script src="colors.js"></script>
+        <script src="symbols.js"></script>
+        <script src="reformat.js"></script>
+    </body>
+</html>
