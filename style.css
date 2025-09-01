@@ -218,3 +218,9 @@ a, button {
 .spoiler:hover {
     background-color: transparent;
 }
+
+#hints img {
+    width: 80px;
+    height: 80px;
+    image-rendering: pixelated;
+}
